@@ -1,14 +1,14 @@
-# Hyperliquid AI Research Platform
+# Camry AI Trading Agent
 
-Production-oriented personal research and paper-trading backend for Hyperliquid.
+Personal AI-powered crypto trading research and paper-trading agent.
 
-The default mode is `paper`. The application does not place real orders. Any future live execution must be explicitly enabled with `TRADING_MODE=live` and implemented behind the execution boundary.
+Camry is a portfolio project built to explore market-data collection, AI-assisted trade research, risk controls, Telegram alerts, and paper-trading analytics. The default mode is `paper`; the application is designed for simulated trading and research, not real-money execution.
 
 ## Features
 
 - Async FastAPI backend
 - SQLAlchemy async models and Alembic migrations for Supabase/PostgreSQL
-- Hyperliquid REST and websocket market-data clients
+- Crypto market-data collectors
 - CoinGecko and Fear & Greed collectors
 - RSS news collector with deduplication hashes
 - Reddit community and Telegram bot-update news ingestion
@@ -78,12 +78,10 @@ TRADING_MODE=paper
 
 ## External API Notes
 
-- Hyperliquid public REST uses `POST https://api.hyperliquid.xyz/info`.
-- Hyperliquid candle snapshots use request type `candleSnapshot`.
-- Hyperliquid websocket subscriptions are available from the official websocket docs.
+- Exchange and market-data integrations are used for research and paper-trading signals.
 - CoinGecko provides REST market-data endpoints and paid websocket delivery.
 - Alternative.me Fear & Greed Index uses `GET https://api.alternative.me/fng/`.
 
 ## Safety
 
-This project intentionally separates signal generation from execution. Paper trading is implemented; live execution is not. Every decision is persisted to `signals`, `trades`, and `logs` where applicable so decisions can be audited later.
+This project prioritizes research and risk management. Paper trading is implemented; live real-money execution is not enabled. Every decision is persisted to `signals`, `trades`, and `logs` where applicable so decisions can be audited later.
