@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@dydxprotocol/v4-client-js": "3.6.0"
+  }
+}

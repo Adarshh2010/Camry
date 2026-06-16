@@ -1,0 +1,17 @@
+.env
+.venv/
+node_modules/
+.pycache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.tmp/
+logs/
+.next/
+dist/
+build/
+*.egg-info/
+*.tgz
+.DS_Store
